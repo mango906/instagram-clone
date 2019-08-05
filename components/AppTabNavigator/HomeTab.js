@@ -1,6 +1,7 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
-import { Icon } from "native-base";
+import { StyleSheet } from "react-native";
+import { Container, Content, Icon } from "native-base";
+import CardComponent from "../CardComponent";
 
 export default class HomeTab extends React.Component {
   static navigationOptions = {
@@ -9,9 +10,11 @@ export default class HomeTab extends React.Component {
 
   render() {
     return (
-      <View style={style.container}>
-        <Text>HomeTab</Text>
-      </View>
+      <Container style={style.container}>
+        <Content>
+          <CardComponent />
+        </Content>
+      </Container>
     );
   }
 }
@@ -19,7 +22,6 @@ export default class HomeTab extends React.Component {
 const style = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center"
+    backgroundColor: "white"
   }
 });
